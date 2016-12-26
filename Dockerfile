@@ -13,7 +13,7 @@ RUN groupadd tomcat
 RUN useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 
 RUN mkdir /opt/tomcat
-RUN tar xzvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
+RUN tar xzvf /opt/apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
 RUN cd /opt/tomcat
 RUN chgrp -R tomcat /opt/tomcat
 RUN chmod -R g+r conf
